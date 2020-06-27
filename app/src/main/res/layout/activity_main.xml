@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/onOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="37dp"
+        android:text="Turn On/Off"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp" />
+
+    <Button
+        android:id="@+id/discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/onOff"
+        android:layout_alignBottom="@+id/onOff"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="8dp"
+        android:text="Discover Peers" />
+
+    <ListView
+        android:id="@+id/peerListView"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@+id/onOff"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/holo_orange_light" />
+
+    <TextView
+        android:id="@+id/readMsg"
+        android:layout_width="175dp"
+        android:layout_height="132dp"
+        android:layout_below="@+id/peerListView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginRight="209dp"
+        android:text="Message"
+        android:background="#e6cec2"
+        android:textColor="#1b377c"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/writeMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_toStartOf="@+id/sendButton"
+        android:layout_toLeftOf="@+id/sendButton"
+
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Send"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:text="Connection Status"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/onOff"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="WiFi"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="34dp" />
+
+
+    <TextView
+        android:id="@+id/titleTextGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="300dp"
+        android:text="GPS LOCATION"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/onOff"
+        android:layout_alignLeft="@+id/onOff"
+        android:layout_marginStart="-14dp"
+        android:layout_marginLeft="-14dp"
+        android:layout_marginTop="320dp"
+        android:text="Request Location" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:background="#5976f5"
+
+        android:gravity="center"
+        android:text="Coordinates"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp" />
+
+    <!--<com.google.android.gms.maps.MapView-->
+        <!--android:id="@+id/mapview"-->
+        <!--android:layout_width="211dp"-->
+        <!--android:layout_height="204dp"-->
+        <!--android:layout_above="@+id/textView"-->
+        <!--android:layout_below="@+id/peerListView"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:layout_marginEnd="4dp"-->
+        <!--android:layout_marginRight="4dp"-->
+        <!--android:layout_marginBottom="4dp" />-->
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="195dp"
+        android:layout_height="219dp"
+        android:layout_above="@+id/textView"
+        android:layout_below="@+id/peerListView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp" />
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+
+
+</RelativeLayout>
